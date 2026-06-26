@@ -275,12 +275,5 @@ Open `dashboard/D2C_Customer_Value_Dashboard.pbix` in Power BI Desktop. Update t
 
 ---
 
-## Contact
-
-**Point of Contact (per brief):**  
-Achyuth — 6381774762  
-Dhairya Nisar — 8928149400
-
----
 
 *Consulting & Analytics Club, IIT Guwahati — Summer Projects 2026*
