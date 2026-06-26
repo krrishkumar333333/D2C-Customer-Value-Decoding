@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Inter', Arial, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: #1a1a2e;
+  }
+  .page {
+    width: 850px;
+    min-height: 1100px;
+    background: white;
+    padding: 48px 56px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+  }
+  .header {
+    border-bottom: 3px solid #1a3c6e;
+    padding-bottom: 16px;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .header-left h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a3c6e;
+    letter-spacing: -0.3px;
+    text-transform: uppercase;
+  }
+  .header-left h2 {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    margin-top: 2px;
+  }
+  .header-right {
+    font-size: 11px;
+    color: #888;
+    text-align: right;
+    line-height: 1.6;
+  }
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .kpi {
+    background: #f7f9fc;
+    border-left: 3px solid #1a3c6e;
+    padding: 12px 14px;
+  }
+  .kpi .val {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a3c6e;
+  }
+  .kpi .lbl {
+    font-size: 10px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
+  }
+  .section-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #1a3c6e;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .seg-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11.5px;
+  }
+  .seg-table th {
+    background: #1a3c6e;
+    color: white;
+    font-weight: 600;
+    padding: 7px 10px;
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .seg-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 11px;
+  }
+  .seg-table tr:nth-child(even) td { background: #f7f9fc; }
+  .tag {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .tag-green { background: #dcfce7; color: #166534; }
+  .tag-red { background: #fee2e2; color: #991b1b; }
+  .tag-yellow { background: #fef9c3; color: #854d0e; }
+  .tag-blue { background: #dbeafe; color: #1e40af; }
+  .finding {
+    font-size: 11.5px;
+    line-height: 1.65;
+    color: #333;
+    margin-bottom: 8px;
+    padding-left: 10px;
+    border-left: 2px solid #cbd5e1;
+  }
+  .finding strong { color: #1a3c6e; }
+  .rec-box {
+    background: #f0f5ff;
+    border: 1px solid #c7d7f5;
+    border-radius: 4px;
+    padding: 12px 14px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .rec-box .rec-title {
+    font-weight: 700;
+    font-size: 11px;
+    color: #1a3c6e;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+  }
+  .rec-item {
+    margin-bottom: 6px;
+    color: #333;
+  }
+  .rec-item::before { content: "→ "; color: #1a3c6e; font-weight: 700; }
+  .footer {
+    border-top: 1px solid #e2e8f0;
+    margin-top: 22px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #aaa;
+  }
+  .highlight-box {
+    background: #1a3c6e;
+    color: white;
+    padding: 11px 16px;
+    border-radius: 4px;
+    font-size: 11.5px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+  .highlight-box strong { color: #93c5fd; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="header-left">
+      <h1>Executive Summary — Decoding Customer Value</h1>
+      <h2>D2C Fashion Brand · Customer Retention & Promotional Strategy · June 2026</h2>
+    </div>
+    <div class="header-right">
+      Krishna Vijay Kunwar<br>
+      Consulting &amp; Analytics Club, IIT Guwahati<br>
+      Summer Projects '26
+    </div>
+  </div>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="val">3,900</div><div class="lbl">Customers Analysed</div></div>
+    <div class="kpi"><div class="val">$5.92M</div><div class="lbl">Revenue Proxy (LTV)</div></div>
+    <div class="kpi"><div class="val">43%</div><div class="lbl">Avg Promo Dependency</div></div>
+    <div class="kpi"><div class="val">17.1%</div><div class="lbl">True Loyalists</div></div>
+  </div>
+
+  <div class="highlight-box">
+    <strong>Central Finding:</strong> 17.1% of customers (True Loyalists) generate 33.3% of total revenue with <strong>zero promotional dependency</strong>. Conversely, Bargain Hunters (28.1% of the base) contribute only 16.4% of revenue and are entirely discount-driven. The brand is currently subsidising one-time buyers at the expense of its most profitable segment.
+  </div>
+
+  <div class="section-title">Customer Segmentation — Revenue Distribution</div>
+  <table class="seg-table">
+    <thead>
+      <tr>
+        <th>Segment</th><th>Customers</th><th>Revenue Share</th><th>Avg LTV</th><th>Promo Reliance</th><th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>True Loyalists</strong></td><td>668 (17.1%)</td><td>33.3%</td><td>$2,954</td><td>0%</td>
+        <td><span class="tag tag-green">Protect</span></td>
+      </tr>
+      <tr>
+        <td>Standard Customers</td><td>1,792 (45.9%)</td><td>37.2%</td><td>$1,228</td><td>~43%</td>
+        <td><span class="tag tag-blue">Develop</span></td>
+      </tr>
+      <tr>
+        <td>Frequent Modest Spenders</td><td>343 (8.8%)</td><td>13.1%</td><td>$2,264</td><td>~43%</td>
+        <td><span class="tag tag-yellow">Monitor</span></td>
+      </tr>
+      <tr>
+        <td>Bargain Hunters</td><td>1,097 (28.1%)</td><td>16.4%</td><td>$884</td><td>100%</td>
+        <td><span class="tag tag-red">Sunset Discounts</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="two-col">
+    <div>
+      <div class="section-title">Key Analytical Findings</div>
+      <div class="finding"><strong>Loyalty Definition:</strong> Revealed-Preference (Definition A) validated with −0.395 promo-dependency correlation vs. +0.021 for frequency-only Definition B. Spend discipline, not purchase frequency, predicts genuine loyalty.</div>
+      <div class="finding"><strong>Geography:</strong> Arizona (29.2%), Alaska (29.2%), and Pennsylvania (27.0%) show the highest True Loyalist concentration — below-average promo sensitivity signals organic demand not yet deliberately targeted.</div>
+      <div class="finding"><strong>Category Risk:</strong> Outerwear carries the highest Bargain Hunter concentration (29.6%), followed by Accessories (28.3%) — both categories are most exposed to margin erosion from promotional cycles.</div>
+    </div>
+    <div>
+      <div class="section-title">Strategic Recommendations</div>
+      <div class="rec-box">
+        <div class="rec-title">Promotional Sunset Plan</div>
+        <div class="rec-item">Phase out discounts for Bargain Hunters in Outerwear/Accessories over 2 quarters; protect Standard Customers with loyalty tiers instead.</div>
+        <div class="rec-item">Introduce subscription-gated early access as a discount substitute — 27% of the base is already subscribed.</div>
+        <div class="rec-item">Track: promo redemption rate, segment revenue share, and gross margin per category monthly.</div>
+      </div>
+      <div style="height:10px;"></div>
+      <div class="rec-box">
+        <div class="rec-title">Ideal Customer Acquisition Profile</div>
+        <div class="rec-item">Ages 30–44, Express shipping preference, non-promo buyer, subscription enrolled.</div>
+        <div class="rec-item">Geo-target Arizona, Alaska, and Pennsylvania with full-price brand campaigns.</div>
+        <div class="rec-item">Use Credit Card / PayPal payment affinity as a paid-media targeting signal.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span>Confidential — Internal Use Only · D2C Fashion Brand Retention Project</span>
+    <span>Python · SQL · Power BI · June 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
