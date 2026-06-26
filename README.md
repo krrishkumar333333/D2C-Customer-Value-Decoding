@@ -1,5 +1,7 @@
 # Decoding Customer Value: A SQL-Driven Retention Strategy
 
+![Certificate](Decoding_customer_value.png)
+
 > **A full-stack analytics project** — feature engineering (Python), segmentation queries (SQL), and an executive dashboard (Power BI) — built for a 3,900-customer D2C fashion brand with no pre-existing loyalty scores, churn labels, or timestamps.
 
 **Author:** Krishna Vijay Kunwar  
