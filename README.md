@@ -1,11 +1,11 @@
-# Decoding Customer Value: A SQL-Driven Retention Strategy
+# Decoding Customer Value: A SQL- Driven Retention Strategy
 
 ![Certificate](Decoding_customer_value.png)
 
-> **A full-stack analytics project** — feature engineering (Python), segmentation queries (SQL), and an executive dashboard (Power BI) — built for a 3,900-customer D2C fashion brand with no pre-existing loyalty scores, churn labels, or timestamps.
+> **A full-stack analytics project** - feature engineering (Python), segmentation queries (SQL), and an executive dashboard (Power BI) - built for a 3,900-customer D2C fashion brand with no pre-existing loyalty scores, churn labels, or timestamps.
 
 **Author:** Krishna Vijay Kunwar  
-**Programme:** Consulting & Analytics Club, IIT Guwahati — Summer Projects '26  
+**Programme:** Consulting & Analytics Club, IIT Guwahati - Summer Projects '26  
 **Stack:** Python · SQL · Power BI · Excel
 
 ---
@@ -29,7 +29,7 @@
 
 ## Business Context
 
-A direct-to-consumer (D2C) fashion brand sells clothing, accessories, footwear, and outerwear exclusively across the United States — no physical stores, no third-party retailers. Every customer relationship is managed directly by the brand.
+A direct - to-consumer (D2C) fashion brand sells clothing, accessories, footwear, and outerwear exclusively across the United States - no physical stores, no third-party retailers. Every customer relationship is managed directly by the brand.
 
 The brand runs a promotional discount programme and supports multiple payment methods and shipping options. It has grown to approximately 3,900 customers but has never built a structured intelligence layer on top of its transactional data. The founding team needed answers to five critical questions:
 
@@ -43,9 +43,9 @@ The brand runs a promotional discount programme and supports multiple payment me
 
 ## The Analytical Challenge
 
-The dataset has **no loyalty score, no churn label, and no timestamps**. Every concept — loyalty, tenure, satisfaction, promo dependency — had to be *constructed* from raw behavioural signals, not assumed.
+The dataset has **no loyalty score, no churn label, and no timestamps**. Every concept - loyalty, tenure, satisfaction, promo dependency - had to be *constructed* from raw behavioural signals, not assumed.
 
-This project builds two competing loyalty definitions, tests both against four validation criteria (revenue correlation, promo-dependency correlation, internal consistency, statistical significance), and argues clearly for one — grounded in data, not intuition.
+This project builds two competing loyalty definitions, tests both against four validation criteria (revenue correlation, promo-dependency correlation, internal consistency, statistical significance), and argues clearly for one - grounded in data, not intuition.
 
 ---
 
@@ -96,7 +96,7 @@ d2c-customer-value/
 
 ### Geographic Opportunity
 
-States with highest True Loyalist concentration and below-average promo sensitivity — indicating **organic demand not yet deliberately targeted**:
+States with highest True Loyalist concentration and below-average promo sensitivity - indicating **organic demand not yet deliberately targeted**:
 
 | State | True Loyalist % | Avg Spend |
 |-------|----------------|-----------|
@@ -119,7 +119,7 @@ States with highest True Loyalist concentration and below-average promo sensitiv
 
 ## Methodology
 
-### Phase 1 — Feature Engineering (Python)
+### Phase 1 - Feature Engineering (Python)
 
 **Notebook:** `D2C_Feature_Engine.ipynb`
 
@@ -137,13 +137,13 @@ The raw dataset (`transactions.csv`) is a single-row-per-customer table. `purcha
 
 #### Data Quality Finding
 
-`discount_applied` and `promo_code_used` exhibit near-perfect collinearity. This is handled explicitly — the promo dependency score averages both rather than double-counting, and the finding is documented as a structural data quality note.
+`discount_applied` and `promo_code_used` exhibit near-perfect collinearity. This is handled explicitly - the promo dependency score averages both rather than double-counting, and the finding is documented as a structural data quality note.
 
 37 missing `review_rating` values were imputed via median with an explicit `review_rating_imputed_flag` audit column.
 
 #### Two Competing Loyalty Definitions
 
-| | Definition A — Revealed Preference | Definition B — Behavioural Consistency |
+| | Definition A - Revealed Preference | Definition B - Behavioural Consistency |
 |--|-------------------------------------|----------------------------------------|
 | **Criteria** | Top 30% by estimated spend AND zero promo usage | Top quartile by purchase frequency AND high-frequency category |
 | **Logic** | Spend discipline signals commitment | Purchase cadence signals habit |
@@ -183,19 +183,19 @@ A four-panel executive dashboard designed for a non-technical founding team:
 | Panel | What It Shows |
 |-------|--------------|
 | **Customer Pyramid** | Revenue distribution across the four loyalty segments |
-| **Promo Dependency vs. Retention** | Scatter by segment — who needs discounts to buy, and who doesn't |
+| **Promo Dependency vs. Retention** | Scatter by segment - who needs discounts to buy, and who doesn't |
 | **Geographic Opportunity Map** | States with high spend + low promo sensitivity = untapped organic demand |
 | **Category Funnel** | Entry-point categories (low purchase history) vs. retention categories (high purchase history) |
 
 ---
 
-### Phase 4 — Retention Playbook
+### Phase 4 - Retention Playbook
 
 #### Promotional Sunset Plan
 
 **Target segment:** Bargain Hunters (1,097 customers, $970K revenue, 100% promo dependency)
 
-**Why this segment specifically:** These customers show no revenue response outside of promotional windows. Continuing discounts extracts margin without building retention. The elasticity risk (volume drop on promo removal) is real but bounded — their LTV without promos is already the lowest in the base ($884).
+**Why this segment specifically:** These customers show no revenue response outside of promotional windows. Continuing discounts extracts margin without building retention. The elasticity risk (volume drop on promo removal) is real but bounded - their LTV without promos is already the lowest in the base ($884).
 
 | Phase | Action | Timeline | Metric to Track |
 |-------|--------|----------|----------------|
@@ -209,14 +209,14 @@ A four-panel executive dashboard designed for a non-technical founding team:
 
 Based on SQL Query 5 (True Loyalist demographic/behavioural intersection):
 
-- **Age bracket:** 30–44 (peak representation in True Loyalists)
+- **Age bracket:** 30-44 (peak representation in True Loyalists)
 - **Subscription status:** Enrolled (subscription acts as a commitment signal, not just a perk)
 - **Payment method:** Credit Card or PayPal (signals financial comfort and digital purchase habit)
 - **Shipping preference:** Express (willingness to pay for speed correlates with spend level)
 - **Promo behaviour:** Never uses discount codes
 - **Geographies to prioritise:** Arizona, Alaska, Pennsylvania
 
-**Acquisition implication:** Full-price brand campaigns in under-penetrated states (Arizona, Alaska) targeting 30–44 demographics on platforms where Credit Card / PayPal payment affinity can be used as a targeting signal.
+**Acquisition implication:** Full-price brand campaigns in under-penetrated states (Arizona, Alaska) targeting 30-44 demographics on platforms where Credit Card / PayPal payment affinity can be used as a targeting signal.
 
 ---
 
@@ -276,4 +276,4 @@ Open `dashboard/D2C_Customer_Value_Dashboard.pbix` in Power BI Desktop. Update t
 ---
 
 
-*Consulting & Analytics Club, IIT Guwahati — Summer Projects 2026*
+*Consulting & Analytics Club, IIT Guwahati - Summer Projects 2026*
