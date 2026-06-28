@@ -199,9 +199,9 @@ A four-panel executive dashboard designed for a non-technical founding team:
 
 | Phase | Action | Timeline | Metric to Track |
 |-------|--------|----------|----------------|
-| 1 | Halt new promo codes for Bargain Hunters in Outerwear | Month 1–2 | Redemption rate, category margin |
-| 2 | Replace discount messaging with value/quality content | Month 2–4 | Open rate, conversion without code |
-| 3 | Evaluate volume retention; extend to Accessories if margin holds | Month 4–6 | Gross margin per category, segment migration |
+| 1 | Halt new promo codes for Bargain Hunters in Outerwear | Month 1-2 | Redemption rate, category margin |
+| 2 | Replace discount messaging with value/quality content | Month 2-4 | Open rate, conversion without code |
+| 3 | Evaluate volume retention; extend to Accessories if margin holds | Month 4-6 | Gross margin per category, segment migration |
 
 **What you risk:** Up to 16.4% of current revenue volume (not profit) if Bargain Hunters churn entirely. In practice, partial conversion to Standard Customers is the expected outcome.
 
